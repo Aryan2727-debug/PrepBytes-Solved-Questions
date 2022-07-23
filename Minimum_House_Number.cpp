@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <iostream>
   using namespace std;
   
   int main()
@@ -9,11 +10,19 @@
     while(T>0){
       int N;
       cin>>N;
+      int min=INT_MAX;
+      int index=-1;
       int arr[N];
       for(int i=0;i<N;i++){
         cin>>arr[i];
       }
-      cout<<*min_element(arr,arr+N)<<" "<<*max_element(arr,arr+N);
+      for(int i=0;i<N;i++){
+        if(arr[i]<min){
+          min=arr[i];
+          index=i;
+        }
+      }
+      cout<<index;
       cout<<endl;
       T--;
     }
