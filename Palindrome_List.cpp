@@ -12,7 +12,7 @@ SinglyLinkedListNode(int node_data)
 bool palindromeLlist(SinglyLinkedListNode *head)
 {
 //write your code here
-   SinglyLinkedListNode* slow=head;
+    SinglyLinkedListNode* slow=head;
     SinglyLinkedListNode* fast=head;
     while(fast!=NULL and fast->next!=NULL){
         slow=slow->next;
